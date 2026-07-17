@@ -1,0 +1,13 @@
+;; data/culture-tx.edn — DataScript tx-data derived from src/culture/facts.cljc
+;; `culture.facts/catalog` (ADR-2607171400 addendum 2, Wave 1 country-level).
+;; Same shape across every cloud-itonami-iso3166-* sibling. Do not hand-edit;
+;; regenerate from the catalog.
+
+[
+#:culture{:id "gnb.dish.caldo-de-mancarra", :name "Caldo de mancarra", :country "GNB", :kind :dish, :summary "Traditional caldo (soup) of Guinea-Bissauan cuisine.", :url "https://en.wikipedia.org/wiki/Guinea-Bissauan_cuisine", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "gnb.dish.yassa", :name "Yassa", :country "GNB", :kind :dish, :summary "Chicken prepared with mustard, citrus and onion, eaten in Guinea-Bissau during celebrations such as Amílcar Cabral's birthday.", :url "https://en.wikipedia.org/wiki/Guinea-Bissauan_cuisine", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "gnb.dish.cafriela-de-frango", :name "Cafriela de frango", :country "GNB", :kind :dish, :summary "Grilled spicy chicken dish of Guinea-Bissauan cuisine.", :url "https://en.wikipedia.org/wiki/Guinea-Bissauan_cuisine", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "gnb.beverage.palm-wine", :name "Palm wine", :country "GNB", :kind :beverage, :summary "Beverage with which family ceremonies marking birth, circumcision, marriage and death are celebrated in Guinea-Bissau.", :url "https://en.wikipedia.org/wiki/Guinea-Bissauan_cuisine", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "gnb.product.cashew", :name "Cashew nuts", :country "GNB", :kind :product, :summary "Guinea-Bissau ranked ninth in world cashew production in 2019; cashew nuts are a primary export commodity alongside fish.", :url "https://en.wikipedia.org/wiki/Economy_of_Guinea-Bissau", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "gnb.heritage.bijagos-islands", :name "Bijagós Islands", :country "GNB", :kind :heritage, :summary "Archipelago of about 88 islands and islets off the coast of Guinea-Bissau, a UNESCO Biosphere Reserve since 1996 and a World Heritage Site as of 2025.", :url "https://en.wikipedia.org/wiki/Bijag%C3%B3s_Islands", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+]
