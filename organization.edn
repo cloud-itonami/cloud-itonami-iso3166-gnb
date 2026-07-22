@@ -5,8 +5,8 @@
   :name-en "Guinea-Bissau"
   :name-local "Guiné-Bissau"
   :wikidata "Q1007"
-  :head-role "ARMP / public procurement"
-  :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+  :head-role "national public-sector procurement regulatory body (formerly \"Central Unit of Public Purchases\") / Conservatória do Registo Comercial (commercial registration)"
+  :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored. Corrected 2026-07-22: the earlier value here (\"ARMP / public procurement\") named a regulator that could NOT be independently verified for Guinea-Bissau specifically -- see src/marketentry/facts.cljc and README.md for the research basis of this correction."
   :contact-page "https://www.wikidata.org/wiki/Q3739"
   :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
   :hq {:line-en "Bissau" :country "gnb" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3739" :last-verified "2026-07-10" :sourcing "authoritative"}
