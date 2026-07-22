@@ -40,53 +40,62 @@
       on the OHADA Uniform Act on General Commercial Law -- Guinea-
       Bissau is an OHADA member state (acceded).
 
-  IMPORTANT CORRECTION (same pattern as `cloud-itonami-iso3166-stp`'s
+  CORRECTION HISTORY (same pattern as `cloud-itonami-iso3166-stp`'s
   `STP` entry docstring): this repo's original scaffold (README.md,
   organization.edn `:head-role`) claimed a named regulator \"ARMP\" for
   Guinea-Bissau. That specific claim could NOT be independently
-  confirmed for this research pass -- \"ARMP\" is a real procurement-
-  regulator ACRONYM used by several OTHER African jurisdictions
-  (Senegal, Côte d'Ivoire, DR Congo, Guinea, Cameroon, Benin, Cape
-  Verde), but no primary Guinea-Bissau government source confirming
-  that same acronym for Guinea-Bissau's own procurement body was found.
-  An additional targeted search pass (beyond the original dossier) also
-  surfaced a World Bank Guinea-Bissau Public Expenditure Review
-  reference to a \"Central Public Procurement Unit\" and scattered
-  secondary mentions of an acronym \"ARCP\" in workshop/social-media
-  contexts (e.g. an Angola government report listing \"ARCP da
-  Guiné-Bissau\" as a PALOP workshop participant) -- neither rises to
-  the bar of an independently-verified PRIMARY source (a Guinea-Bissau
-  government domain or the procurement law's own text), so neither is
-  stated as fact here. `:owner-authority` below therefore names the
-  body only in English descriptive terms (per the dossier: formerly
-  the \"Central Unit of Public Purchases\"), not by an unverified
-  Portuguese acronym. Do not upgrade this to a specific named agency
-  (\"ARMP\", \"ARCP\", or any other) without a verified primary source.
+  confirmed -- \"ARMP\" is a real procurement-regulator ACRONYM used by
+  several OTHER African jurisdictions (Senegal, Côte d'Ivoire, DR
+  Congo, Guinea, Cameroon, Benin, Cape Verde), but no primary Guinea-
+  Bissau government source confirming that same acronym for Guinea-
+  Bissau's own procurement body was found. A 2026-07-22 research pass
+  also surfaced scattered SECONDARY mentions of an acronym \"ARCP\" (a
+  World Bank Public Expenditure Review's \"Central Public Procurement
+  Unit\" description, and an Angola government report listing \"ARCP da
+  Guiné-Bissau\" as a PALOP workshop participant) but explicitly
+  declined to state it as fact, since neither source was a primary
+  Guinea-Bissau government domain or the procurement law's own text --
+  the docstring at that time said: \"Do not upgrade this to a specific
+  named agency ('ARMP', 'ARCP', or any other) without a verified
+  primary source.\"
 
-  What this catalog deliberately does NOT claim (per dossier
-  instruction): no national e-procurement portal was found -- none is
-  invented. No specific tax-ID scheme name (a NIF-equivalent) was
-  independently confirmed for Guinea-Bissau -- the tax-registration
-  requirement is grounded ONLY in \"the general tax authority\"
-  registration performed via the CFE single window, without a named
-  acronym. Accordingly there is no separate `:rep-*`/`:corporate-
-  number-*` sub-map on the `GNB` entry below (contrast `AGO`/`MLI`,
-  which both have at least one, grounded in their own richer
-  dossiers) -- `rep-spec-basis`/`corporate-number-spec-basis` return
-  nil for `GNB`, honestly, not as a bug.")
+  RESOLUTION (2026-07-23): that verified primary source has now been
+  found and independently fetched+read (twice -- once by the
+  delegated research agent, once again directly by the orchestrating
+  session before this upgrade was committed): Guinea-Bissau's own
+  Boletim Oficial, Número 34 (20 de Agosto de 2012), hosted at
+  `dgcp.mef.gw` (a Guinea-Bissau government domain), carries
+  Decreto-Lei n.° 2/2012 (\"Código dos Contratos Públicos\"). Its own
+  ARTIGO 106.° (\"Entidade responsável pela regulação\") reads,
+  verbatim: \"É instituída a entidade responsável pela regulação dos
+  concursos públicos e de delegação de serviços públicos denominada
+  Autoridade de Regulação dos Concursos Públicos (ARCP) cuja
+  organização e funcionamento serão objetos de um diploma autónomo.\"
+  \"ARCP\" -- NOT \"ARMP\" -- is therefore now a confirmed fact, cited
+  below. The \"ARMP\" rejection above remains correct and unchanged;
+  only the previously-undecided \"ARCP\" question is now resolved.
+
+  What this catalog still does NOT claim: no national e-procurement
+  portal was found -- none is invented. No specific tax-ID scheme name
+  (a NIF-equivalent) was independently confirmed for Guinea-Bissau --
+  the tax-registration requirement is grounded ONLY in \"the general
+  tax authority\" registration performed via the CFE single window,
+  without a named acronym. Accordingly there is still no separate
+  `:rep-*`/`:corporate-number-*` sub-map on the `GNB` entry below
+  (contrast `AGO`/`MLI`, which both have at least one, grounded in
+  their own richer dossiers) -- `rep-spec-basis`/`corporate-number-
+  spec-basis` return nil for `GNB`, honestly, not as a bug.")
 
 (def catalog
   {"GNB" {:name "Guinea-Bissau"
-          ;; The dossier surfaced an English-language description of
-          ;; this body ("a National Public Procurement Agency",
-          ;; formerly the "Central Unit of Public Purchases") but NOT
-          ;; an independently-verified current Portuguese official
-          ;; name -- see the IMPORTANT CORRECTION note above. State
-          ;; only what is confirmed.
-          :owner-authority "the national public-sector procurement regulatory body responsible for administering the Lei-Quadro Relativo Aos Contratos Públicos (formerly known as the \"Central Unit of Public Purchases\"; its current Portuguese official name was NOT independently confirmed in this research pass -- see this namespace's docstring)"
-          :legal-basis "Lei-Quadro Relativo Aos Contratos Públicos (Framework Law on Public Contracts)"
+          ;; RESOLVED 2026-07-23 (see RESOLUTION note in the namespace
+          ;; docstring): the regulator is confirmed by name via a
+          ;; primary Guinea-Bissau government source, superseding the
+          ;; prior "not independently confirmed" placeholder text.
+          :owner-authority "Autoridade de Regulação dos Concursos Públicos (ARCP) -- created by Artigo 106.° of the Código dos Contratos Públicos (Decreto-Lei n.° 2/2012), confirmed via Guinea-Bissau's own Boletim Oficial No.34 (20 de Agosto de 2012), hosted at dgcp.mef.gw; formerly referred to in this catalog only as \"the national public-sector procurement regulatory body\" / \"Central Unit of Public Purchases\" before this confirmation (see namespace docstring for the distinct, rejected acronym this is not to be confused with)"
+          :legal-basis "Código dos Contratos Públicos (Decreto-Lei n.° 2/2012), Artigo 106.° (creates the ARCP); Artigo 101.°(b) (disciplinary exclusion from public procurement for a period of 1 to 5 years, per the gravity of the infraction); also grounded, as before, in the annual-procurement-plan requirement indexed at the World Bank's PPIAF/PPP Knowledge Lab library"
           :national-spec "an annual public-procurement plan requirement (each contracting authority develops one from its own activity program, incorporated into the State budget; only contracts included in this plan may be executed) -- no verified national e-procurement portal"
-          :provenance "https://www.ppiaf.org/documents/2808 (mirrored at https://library.pppknowledgelab.org/documents/2808)"
+          :provenance "https://dgcp.mef.gw/quadro-legal/boletins-oficiais/7-bo-34-20-08-2012-dl-2-2012-ccp/file (Boletim Oficial No.34, 20 de Agosto de 2012, Decreto-Lei n.° 2/2012, Código dos Contratos Públicos, own primary text) ; https://www.ppiaf.org/documents/2808 (mirrored at https://library.pppknowledgelab.org/documents/2808)"
           :required-evidence ["Centro de Formalização de Empresas (CFE) business-registration record"
                                "Conservatória do Registo Comercial commercial-registration record (OHADA Uniform Act on General Commercial Law)"
                                "General tax-authority registration record (obtained via the CFE single window)"

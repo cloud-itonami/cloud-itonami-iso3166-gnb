@@ -15,11 +15,12 @@
     (is (nil? (facts/rep-spec-basis "GNB")))
     (is (nil? (facts/corporate-number-spec-basis "GNB")))))
 
-(deftest gnb-owner-authority-does-not-claim-unverified-armp
-  (testing "owner-authority names only what the dossier confirms, not the unverifiable ARMP claim the original scaffold made"
+(deftest gnb-owner-authority-names-confirmed-arcp-not-unverified-armp
+  (testing "owner-authority now names the primary-source-confirmed ARCP, and still does not repeat the rejected ARMP claim"
     (let [sb (facts/spec-basis "GNB")]
-      (is (not (re-find #"ARMP" (:owner-authority sb))) "must not repeat the unverifiable ARMP claim")
-      (is (re-find #"Central Unit of Public Purchases" (:owner-authority sb))))))
+      (is (not (re-find #"\bARMP\b" (:owner-authority sb))) "must not repeat the unverifiable ARMP claim")
+      (is (re-find #"ARCP" (:owner-authority sb)))
+      (is (re-find #"dgcp\.mef\.gw" (:provenance sb))))))
 
 (deftest gnb-national-spec-does-not-claim-eprocurement-portal
   (testing "no verified national e-procurement portal was found -- must not invent one"

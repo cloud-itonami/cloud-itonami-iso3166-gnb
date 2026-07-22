@@ -16,7 +16,7 @@ the AGO reference's seven -- see `src/marketentry/governor.cljc` for why.
 clojure -M:dev:test
 ```
 
-## Correction: this repo previously claimed "ARMP"
+## Correction history: "ARMP" rejected, "ARCP" now confirmed
 
 This repo's original scaffold said Guinea-Bissau's public-procurement
 regulator was **"ARMP"**. That claim could **not be independently verified**
@@ -24,28 +24,42 @@ for Guinea-Bissau specifically: "ARMP" is a real procurement-regulator
 acronym used by several OTHER African jurisdictions (Senegal, Côte d'Ivoire,
 DR Congo, Guinea, Cameroon, Benin, Cape Verde), but no primary Guinea-Bissau
 government source confirming that same acronym for Guinea-Bissau's own
-procurement body was found. An additional targeted search pass (2026-07-22)
-also surfaced a World Bank Guinea-Bissau Public Expenditure Review reference
-to a "Central Public Procurement Unit" and scattered secondary mentions of an
-acronym "ARCP" in workshop/social-media contexts -- neither rises to the bar
-of an independently-verified PRIMARY source, so neither is stated as fact.
-This repo no longer states the "ARMP" claim anywhere (`src/marketentry/
-facts.cljc`, `organization.edn`, `docs/`). What IS verified, and is what this
-actor's catalog now cites:
+procurement body was found -- this repo does not state the "ARMP" claim
+anywhere.
 
-- **Procurement legal basis**: Lei-Quadro Relativo Aos Contratos Públicos
-  (Framework Law on Public Contracts), indexed at the World Bank's PPIAF/PPP
-  Knowledge Lab library: `https://www.ppiaf.org/documents/2808` (mirrored at
-  `https://library.pppknowledgelab.org/documents/2808`).
+A 2026-07-22 research pass also surfaced scattered SECONDARY mentions of an
+acronym **"ARCP"** (a World Bank Public Expenditure Review's "Central Public
+Procurement Unit" description, and an Angola government report listing
+"ARCP da Guiné-Bissau" as a PALOP workshop participant) but explicitly
+declined to state it as fact, since neither source was a primary
+Guinea-Bissau government domain or the procurement law's own text.
+
+**2026-07-23 resolution**: that primary source has now been found and
+independently fetched+read directly: Guinea-Bissau's own Boletim Oficial,
+Número 34 (20 de Agosto de 2012), hosted at `dgcp.mef.gw` (a Guinea-Bissau
+government domain), carries Decreto-Lei n.° 2/2012 ("Código dos Contratos
+Públicos"). Its own Artigo 106.° ("Entidade responsável pela regulação")
+reads, verbatim: "É instituída a entidade responsável pela regulação dos
+concursos públicos e de delegação de serviços públicos denominada
+Autoridade de Regulação dos Concursos Públicos (ARCP)..." — "ARCP" is
+therefore now a confirmed fact, cited in `src/marketentry/facts.cljc` and
+`organization.edn`.
+
+What this actor's catalog now cites:
+
+- **Procurement legal basis**: Código dos Contratos Públicos (Decreto-Lei
+  n.° 2/2012), Artigo 106.° (creates the ARCP) and Artigo 101.°(b)
+  (disciplinary exclusion for 1-5 years, per the gravity of the infraction)
+  -- own primary text at `https://dgcp.mef.gw/quadro-legal/boletins-
+  oficiais/7-bo-34-20-08-2012-dl-2-2012-ccp/file`; also still grounded in
+  the annual-procurement-plan requirement indexed at the World Bank's
+  PPIAF/PPP Knowledge Lab library: `https://www.ppiaf.org/documents/2808`.
 - **Procurement planning requirement**: contracting authorities must develop
   an annual public-procurement plan, based on their own activity program,
   incorporated into the State budget -- only contracts included in this
   annual plan may be executed.
-- **Procurement administering authority**: an English-language description
-  was found (a national public procurement agency, formerly the "Central
-  Unit of Public Purchases") but no independently-verified current
-  Portuguese official name -- state it only in English terms, do not invent
-  a Portuguese name.
+- **Procurement administering authority**: Autoridade de Regulação dos
+  Concursos Públicos (ARCP), per the primary source above.
 - **Commercial/company registration**: business creation and registration
   procedures run through the **Centro de Formalização de Empresas (CFE)**,
   which centralizes registration with the commercial registry AND the
@@ -53,8 +67,14 @@ actor's catalog now cites:
   **Conservatória do Registo Comercial**, operating within the Ministry of
   Justice's framework.
 - **Legal/corporate framework**: Guinea-Bissau's commercial law draws on the
-  **OHADA Uniform Act on General Commercial Law** -- Guinea-Bissau is an
-  OHADA member state (acceded).
+  **OHADA Uniform Act on General Commercial Law** (AUDCG, for RCCM
+  registration) and the **OHADA Acte uniforme relatif au droit des sociétés
+  commerciales et du groupement d'intérêt économique** (AUSCGIE, for company
+  formation/governance) -- Guinea-Bissau is an OHADA member state, distinct
+  from "Guinée"/"Guinée Equatoriale" (confirmed directly on OHADA's own
+  member-states page). See `src/statute/facts.cljc` for the general-law
+  compliance catalog (AUSCGIE, Lei Geral do Trabalho Lei n.º 2/86, Código do
+  Investimento Lei n.° 13/2011).
 - **National e-procurement**: no verified transactional portal found for
   Guinea-Bissau (unlike Angola's SNCP e-procurement system) -- not invented.
 - **Tax-ID scheme**: no specific named tax-ID scheme (a NIF-equivalent) was
