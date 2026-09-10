@@ -58,7 +58,7 @@ sources):
   authority" registration obtained via the CFE single window, without
   a named acronym.
 
-See `src/marketentry/facts.cljc` for the full catalog entry and its
+See `src/marketentry/facts.kotoba` for the full catalog entry and its
 docstring, which is the single source of truth for every regulatory
 claim this actor makes.
 
