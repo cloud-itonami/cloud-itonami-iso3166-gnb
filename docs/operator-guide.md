@@ -11,7 +11,7 @@
   Purchases"). Its current Portuguese official name was NOT
   independently confirmed in this research pass — do not repeat
   "ARMP" (this repo's original scaffold had claimed that, in error;
-  see `docs/business-model.md` and `src/marketentry/facts.cljc` for
+  see `docs/business-model.md` and `src/marketentry/facts.kotoba` for
   the correction). Describe the body only in the English terms above
   until a verified primary source is found.
 - **Procurement planning**: contracting authorities must develop an
@@ -62,7 +62,7 @@
 
 ## Demo engagements
 
-`src/marketentry/store.cljc`'s `demo-data` seeds five engagements:
+`src/marketentry/store.kotoba`'s `demo-data` seeds five engagements:
 
 | id     | scenario                                            |
 |--------|------------------------------------------------------|

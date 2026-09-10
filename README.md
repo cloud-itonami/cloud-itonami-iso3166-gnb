@@ -10,7 +10,7 @@ framework siblings `cloud-itonami-iso3166-dji` (Djibouti) and
 Flagship check: `commercial-registration-missing` (Conservatória do Registo
 Comercial commercial registration via the Centro de Formalização de Empresas,
 OHADA Uniform Act on General Commercial Law). **Six** governor checks, not
-the AGO reference's seven -- see `src/marketentry/governor.cljc` for why.
+the AGO reference's seven -- see `src/marketentry/governor.kotoba` for why.
 
 ```
 clojure -M:dev:test
@@ -42,7 +42,7 @@ Públicos"). Its own Artigo 106.° ("Entidade responsável pela regulação")
 reads, verbatim: "É instituída a entidade responsável pela regulação dos
 concursos públicos e de delegação de serviços públicos denominada
 Autoridade de Regulação dos Concursos Públicos (ARCP)..." — "ARCP" is
-therefore now a confirmed fact, cited in `src/marketentry/facts.cljc` and
+therefore now a confirmed fact, cited in `src/marketentry/facts.kotoba` and
 `organization.edn`.
 
 What this actor's catalog now cites:
@@ -72,7 +72,7 @@ What this actor's catalog now cites:
   commerciales et du groupement d'intérêt économique** (AUSCGIE, for company
   formation/governance) -- Guinea-Bissau is an OHADA member state, distinct
   from "Guinée"/"Guinée Equatoriale" (confirmed directly on OHADA's own
-  member-states page). See `src/statute/facts.cljc` for the general-law
+  member-states page). See `src/statute/facts.kotoba` for the general-law
   compliance catalog (AUSCGIE, Lei Geral do Trabalho Lei n.º 2/86, Código do
   Investimento Lei n.° 13/2011).
 - **National e-procurement**: no verified transactional portal found for
@@ -93,7 +93,7 @@ Alongside the market-entry / statute catalogs, this repo carries a
 `com-junkawasaki/root`) — national dishes, protected products, beverages,
 crafts, festivals and heritage sites for Guinea-Bissau:
 
-- `src/culture/facts.cljc` — the catalog, source of truth (keyed by
+- `src/culture/facts.kotoba` — the catalog, source of truth (keyed by
   uppercase ISO3, mirroring `statute.facts`).
 - `schema/culture.edn` — DataScript schema.
 - `data/culture-tx.edn` — derived DataScript tx-data (regenerated from
