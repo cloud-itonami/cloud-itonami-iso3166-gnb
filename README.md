@@ -13,7 +13,7 @@ OHADA Uniform Act on General Commercial Law). **Six** governor checks, not
 the AGO reference's seven -- see `src/marketentry/governor.kotoba` for why.
 
 ```
-clojure -M:dev:test
+kbb -M:dev:test
 ```
 
 ## Correction history: "ARMP" rejected, "ARCP" now confirmed
